@@ -5,19 +5,24 @@ import { useExerciseStore } from "../hooks/useExerrcise";
 
 const SearchExercises = () => {
   const [search, setSearch] = useState("");
+  const setLoadingExercise = useExerciseStore((state) => state.setLoadingExercise);
   const setExercise = useExerciseStore((state) => state.setExercise);
   const setbodyPartList = useExerciseStore((state) => state.setBodyPartList);
   const setSearchValue = useExerciseStore((state) => state.setSearchValue);
 
   useEffect(() => {
+    setLoadingExercise(true);
     const fetchData = async () => {
       try {
-        const exercisesData = await fetchDataExercises();
+        const [exercisesData, bodyPartListData] = await Promise.all([fetchDataExercises(), fetchDataBodyPartList()]);
         setExercise(exercisesData);
-        const bodyPartListData = await fetchDataBodyPartList();
         setbodyPartList(bodyPartListData);
+        if (exercisesData?.length && bodyPartListData?.length) {
+          setLoadingExercise(false);
+        }
       } catch (error) {
         console.error("Error fetching exercises:", error);
+        setLoadingExercise(false);
       }
     };
 
