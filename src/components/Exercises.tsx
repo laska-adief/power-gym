@@ -2,7 +2,8 @@ import Grid from "@mui/material/Grid";
 import { useExerciseStore } from "../hooks/useExerrcise";
 import { ExerciseProp } from "../types/exercise";
 import CardExercise from "./CardExercise";
-import { Skeleton, Stack } from "@mui/material";
+import { Skeleton, Stack, Typography } from "@mui/material";
+import NotFoundImage from "./../assets/notfound-image.svg";
 
 const Exercises = () => {
   const loadingExercise = useExerciseStore((state) => state.loadingExercise);
@@ -35,12 +36,20 @@ const Exercises = () => {
 
   const DataDisplay = () => (
     <Grid container spacing={4}>
-      {searchedExercises?.length &&
+      {searchedExercises?.length ? (
         searchedExercises?.map((exercise: ExerciseProp) => (
           <Grid item key={exercise?.id} xs={12} sm={6} md={4} xl={3}>
             <CardExercise exercise={exercise} />
           </Grid>
-        ))}
+        ))
+      ) : (
+        <Grid item xs={12} textAlign={"center"} mt={6}>
+          <Typography variant="h3" color={"#BE3144"}>
+            Data Not Found
+          </Typography>
+          <img src={NotFoundImage} alt="Not Found" style={{ width: "40%" }} />
+        </Grid>
+      )}
     </Grid>
   );
 
