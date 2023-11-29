@@ -7,14 +7,16 @@ import ExerciseDetail from "./pages/ExerciseDetail";
 
 function App() {
   return (
-    <Container maxWidth="lg">
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/exercise/:id" element={<ExerciseDetail />}></Route>
-      </Routes>
+    <main>
+      <Container maxWidth="lg">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/exercise/:id" element={<ExerciseDetail />}></Route>
+        </Routes>
+      </Container>
       <Footer />
-    </Container>
+    </main>
   );
 }
 
