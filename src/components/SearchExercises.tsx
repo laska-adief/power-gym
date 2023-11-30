@@ -14,8 +14,8 @@ const SearchExercises = () => {
     const fetchData = async () => {
       try {
         const exercisesData = await fetchDataExercises();
-        setExercise(exercisesData);
         if (exercisesData?.length) {
+          setExercise(exercisesData);
           setLoadingExercise(false);
         }
       } catch (error) {
