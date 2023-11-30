@@ -28,7 +28,7 @@ const useExerciseStore = create<ExerciseState>()((set) => ({
   searchValue: "",
   setSearchValue: (item: string) => set(() => ({ searchValue: item })),
 
-  category: "",
+  category: "all",
   setCategory: (item: string) => set(() => ({ category: item })),
 
   loadingExercise: false,
