@@ -1,7 +1,7 @@
 import { Box, Skeleton, Stack, Tab, Tabs } from "@mui/material";
 import { useExerciseStore } from "../hooks/useExerrcise";
 import { useEffect, useState } from "react";
-import { fetchDataBodyPartList, fetchDataExercisesByCategory } from "../action";
+import { fetchDataBodyPartList, fetchDataExercises, fetchDataExercisesByCategory } from "../action";
 
 const CategoryExerciseTabs = () => {
   const bodyPartList = useExerciseStore((state) => state.bodyPartList);
@@ -45,9 +45,27 @@ const CategoryExerciseTabs = () => {
     }
   };
 
+  const getDataExercise = async () => {
+    setLoadingExercise(true);
+    try {
+      const exercisesData = await fetchDataExercises();
+      if (exercisesData?.length) {
+        setExercise(exercisesData);
+        setLoadingExercise(false);
+      }
+    } catch (error) {
+      console.error("Error fetching exercises:", error);
+      setLoadingExercise(false);
+    }
+  };
+
   const handleChangeCategory = (event: React.SyntheticEvent, newValue: string) => {
     setCategory(newValue);
-    getDataExerciseByCategory(newValue);
+    if (newValue === "all") {
+      getDataExercise();
+    } else {
+      getDataExerciseByCategory(newValue);
+    }
   };
 
   const LoadingCategory = () => (
