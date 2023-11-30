@@ -9,13 +9,15 @@ const Exercises = () => {
   const loadingExercise = useExerciseStore((state) => state.loadingExercise);
   const exercisesData = useExerciseStore((state) => state.exercises);
   const searchValue = useExerciseStore((state) => state.searchValue);
-  const searchedExercises = exercisesData.filter(
-    (exercise: ExerciseProp) =>
-      exercise.name.includes(searchValue) ||
-      exercise.bodyPart.includes(searchValue) ||
-      exercise.equipment.includes(searchValue) ||
-      exercise.target.includes(searchValue)
-  );
+  const searchedExercises = exercisesData?.length
+    ? exercisesData.filter(
+        (exercise: ExerciseProp) =>
+          exercise.name.includes(searchValue) ||
+          exercise.bodyPart.includes(searchValue) ||
+          exercise.equipment.includes(searchValue) ||
+          exercise.target.includes(searchValue)
+      )
+    : [];
 
   const LoadingDisplay = () => (
     <Stack justifyContent={"center"} alignContent={"center"}>
