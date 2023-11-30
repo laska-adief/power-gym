@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import HeroBanner from "../components/HeroBanner";
 import SearchExercises from "../components/SearchExercises";
 import Exercises from "../components/Exercises";
+import CategoryExerciseTabs from "../components/CategoryExerciseTabs";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       </section>
       <section id="exercises">
         <SearchExercises />
+        <CategoryExerciseTabs />
         <Exercises />
       </section>
     </Box>
