@@ -37,7 +37,7 @@ const Exercises = () => {
   );
 
   const DataDisplay = () => (
-    <Grid container spacing={4}>
+    <Grid container spacing={4} mb={6}>
       {searchedExercises?.length ? (
         searchedExercises?.map((exercise: ExerciseProp) => (
           <Grid item key={exercise?.id} xs={12} sm={6} md={4} xl={3}>
