@@ -1,23 +1,21 @@
 import { Button, Stack, TextField, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
-import { fetchDataBodyPartList, fetchDataExercises } from "../action";
+import { fetchDataExercises } from "../action";
 import { useExerciseStore } from "../hooks/useExerrcise";
 
 const SearchExercises = () => {
   const [search, setSearch] = useState("");
   const setLoadingExercise = useExerciseStore((state) => state.setLoadingExercise);
   const setExercise = useExerciseStore((state) => state.setExercise);
-  const setbodyPartList = useExerciseStore((state) => state.setBodyPartList);
   const setSearchValue = useExerciseStore((state) => state.setSearchValue);
 
   useEffect(() => {
     setLoadingExercise(true);
     const fetchData = async () => {
       try {
-        const [exercisesData, bodyPartListData] = await Promise.all([fetchDataExercises(), fetchDataBodyPartList()]);
+        const exercisesData = await fetchDataExercises();
         setExercise(exercisesData);
-        setbodyPartList(bodyPartListData);
-        if (exercisesData?.length && bodyPartListData?.length) {
+        if (exercisesData?.length) {
           setLoadingExercise(false);
         }
       } catch (error) {
