@@ -11,6 +11,9 @@ interface ExerciseState {
   searchValue: string;
   setSearchValue: (item: string) => void;
 
+  category: string;
+  setCategory: (item: string) => void;
+
   loadingExercise: boolean;
   setLoadingExercise: (item: boolean) => void;
 }
@@ -24,6 +27,9 @@ const useExerciseStore = create<ExerciseState>()((set) => ({
 
   searchValue: "",
   setSearchValue: (item: string) => set(() => ({ searchValue: item })),
+
+  category: "",
+  setCategory: (item: string) => set(() => ({ category: item })),
 
   loadingExercise: false,
   setLoadingExercise: (item: boolean) => set(() => ({ loadingExercise: item })),
