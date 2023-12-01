@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const CardExercise = ({ exercise }: { exercise: ExerciseProp }) => {
   return (
-    <Link to={`/exercise/${exercise?.id}`}>
+    <Link to={`/power-gym/exercise/${exercise?.id}`}>
       <Box
         sx={{
           transition: "all 0.3s ease",

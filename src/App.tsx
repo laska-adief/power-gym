@@ -11,8 +11,8 @@ function App() {
       <Container maxWidth="lg">
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/exercise/:id" element={<ExerciseDetail />}></Route>
+          <Route path="/power-gym" element={<Home />}></Route>
+          <Route path="/power-gym/exercise/:id" element={<ExerciseDetail />}></Route>
         </Routes>
       </Container>
       <Footer />
