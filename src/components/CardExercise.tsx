@@ -16,7 +16,7 @@ const CardExercise = ({ exercise }: { exercise: ExerciseProp }) => {
         }}>
         <img src={exercise?.gifUrl} alt={exercise?.name} loading="lazy" style={{ width: "100%" }} />
         <Box sx={{ p: 2 }}>
-          <Stack direction={"row"} gap={2} mb={2}>
+          <Stack direction={"row"} gap={2} mb={2} flexWrap={"wrap"}>
             <Chip label={exercise?.bodyPart} sx={{ background: "#D83F31", color: "#FFF", textTransform: "uppercase" }} />
             <Chip label={exercise?.target} sx={{ background: "#E9B824", color: "#FFF", textTransform: "uppercase" }} />
           </Stack>
