@@ -59,7 +59,7 @@ const CategoryExerciseTabs = () => {
     }
   };
 
-  const handleChangeCategory = (event: React.SyntheticEvent, newValue: string) => {
+  const handleChangeCategory = (_event: React.SyntheticEvent, newValue: string) => {
     setCategory(newValue);
     if (newValue === "all") {
       getDataExercise();
