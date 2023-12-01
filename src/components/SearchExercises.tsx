@@ -28,10 +28,8 @@ const SearchExercises = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const handleSearch = async () => {
-    if (search) {
-      setSearchValue(search);
-    }
+  const handleSearch = () => {
+    setSearchValue(search);
   };
 
   return (
