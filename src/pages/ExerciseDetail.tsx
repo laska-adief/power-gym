@@ -23,6 +23,11 @@ const ExerciseDetail = () => {
     fetchData();
   }, [id]);
 
+  useEffect(() => {
+    // Scroll to the top when the component mounts (page changes)
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Box minHeight={"100vh"}>
       <Grid container mb={6} spacing={6}>
