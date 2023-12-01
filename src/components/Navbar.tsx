@@ -13,9 +13,6 @@ const Navbar = () => {
         <Link to="/" style={{ fontSize: "24px", fontWeight: "bold", color: "#22092C" }}>
           Home
         </Link>
-        <Link to="/exercise" style={{ fontSize: "24px", fontWeight: "bold", color: "#22092C" }}>
-          Exercise
-        </Link>
       </Stack>
     </Stack>
   );
