@@ -20,7 +20,7 @@ const CardExercise = ({ exercise }: { exercise: ExerciseProp }) => {
             <Chip label={exercise?.bodyPart} sx={{ background: "#D83F31", color: "#FFF", textTransform: "uppercase" }} />
             <Chip label={exercise?.target} sx={{ background: "#E9B824", color: "#FFF", textTransform: "uppercase" }} />
           </Stack>
-          <Typography variant="h5" sx={{ fontWeight: "600", color: "#000", textTransform: "capitalize" }}>
+          <Typography variant="h6" sx={{ fontWeight: "600", color: "#000", textTransform: "capitalize" }}>
             {exercise?.name}
           </Typography>
         </Box>
