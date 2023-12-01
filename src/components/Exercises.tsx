@@ -21,7 +21,7 @@ const Exercises = () => {
 
   const LoadingDisplay = () => (
     <Stack justifyContent={"center"} alignContent={"center"}>
-      <Grid container spacing={4}>
+      <Grid container spacing={4} mb={6}>
         {Array.from({ length: 12 }, (_, index) => (
           <Grid item key={index} xs={12} sm={6} md={4} xl={3} minWidth={264}>
             <Skeleton variant="rounded" sx={{ width: "100%", height: { xs: 358, sm: 260, md: 262, lg: 362, xl: 264 }, mb: 1 }}></Skeleton>
