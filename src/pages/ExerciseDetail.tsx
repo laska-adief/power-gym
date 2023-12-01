@@ -32,7 +32,12 @@ const ExerciseDetail = () => {
     <Box minHeight={"100vh"}>
       <Grid container mb={6} spacing={6}>
         <Grid item xs={12} md={6}>
-          <img src={detailExercise?.gifUrl} alt={detailExercise?.name} loading="lazy" style={{ width: "100%" }} />
+          <img
+            src={detailExercise?.gifUrl}
+            alt={detailExercise?.name}
+            loading="lazy"
+            style={{ width: "100%", boxShadow: "rgba(7, 65, 210, 0.1) 0px 9px 30px" }}
+          />
         </Grid>
         <Grid item xs={12} md={6}>
           <Box mb={4}>
