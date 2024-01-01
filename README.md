@@ -1,30 +1,62 @@
-# React + TypeScript + Vite
+<br/>
+<p align="center">
+  <h1 align="center">Power Gym</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  <p align="center">
+    application for exercise data and animated demonstrations
+    <br/>
+    <br/>
+    <a href="https://github.com/laska-adief/power-gym"><strong>Explore the docs »</strong></a>
+    <br/>
+    <br/>
+    <a href="https://laska-adief.github.io/power-gym/">View Demo</a>
+    .
+  </p>
+</p>
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## About The Project
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+React application that provide you access to over 1300 exercises with individual exercise data and animated demonstrations. Divided into some categories of exercises to give easiness finding exercise you need.
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## Built With
+
+
+
+* [Vite React](https://vitejs.dev/guide/)
+* [Exercises API ](https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb)
+
+## Getting Started
+
+Install node modules packages and run the app
+
+### Installation
+
+1. Clone the repo
+
+```sh
+git clone https://github.com/laska-adief/power-gym
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. Install NPM packages
+
+```sh
+npm install
+```
+
+3. Run app
+
+```sh
+npm run dev
+```
+
+### Creating A Pull Request
+
+
+
+## Authors
+
+* **Laska Adief** - *Frontend Developer* - [Laska Adief](https://github.com/laska-adief/)
+
