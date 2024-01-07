@@ -52,10 +52,6 @@ npm install
 npm run dev
 ```
 
-### Creating A Pull Request
-
-
-
 ## Authors
 
 * **Laska Adief** - *Frontend Developer* - [Laska Adief](https://github.com/laska-adief/)
